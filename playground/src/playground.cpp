@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <memory/memory.h>
+#include <memory/Arena.h>
 
 using namespace std;
 using namespace msa;

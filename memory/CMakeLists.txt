@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.9)
 
 # list the header files
 set(HEADER_FILES
-	include/memory/memory.h
+	include/memory/Arena.h
 	include/memory/block.h
 )
 
 # list the source files
 set(SOURCE_FILES
-	src/memory/memory.cpp
+	src/memory/Arena.cpp
 )
 
 
@@ -22,10 +22,6 @@ add_library(memory
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${HEADER_FILES})
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE_FILES})
 
-target_include_directories(memory
-	PRIVATE
-	${CMAKE_CURRENT_SOURCE_DIR}/../external/stb
-)
 
 # Windows specfic flags to enable W variations of winapi
 if(WIN32)
