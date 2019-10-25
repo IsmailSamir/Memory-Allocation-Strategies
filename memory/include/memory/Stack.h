@@ -25,9 +25,6 @@ namespace msa
 		stack_free(self);
 	}
 
-	MEMORY_EXPORT void
-	stack_free_all(Stack self);
-
 	MEMORY_EXPORT Block
 	stack_alloc(Stack self, size_t size, uint8_t align = DEFAULT_ALIGNMENT);
 }

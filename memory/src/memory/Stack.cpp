@@ -60,13 +60,6 @@ namespace msa
 		::free(self);
 	}
 
-	void
-	stack_free_all(Stack self)
-	{
-		self->head = (uint8_t*)self->memory.ptr;
-		self->allocation_count = 0;
-	}
-
 	Block
 	stack_alloc(Stack self, size_t size, uint8_t align)
 	{

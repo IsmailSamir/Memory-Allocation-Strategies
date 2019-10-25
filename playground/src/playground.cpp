@@ -1,12 +1,10 @@
 #include <iostream>
 
-#include <memory/Stack.h>
+#include <memory/Arena.h>
 
-#include <vector>
+#include <vld.h>
 
-using namespace std;
 using namespace msa;
-
 
 struct Point
 {
@@ -17,27 +15,24 @@ int
 main(int argc, char** argv)
 {
 
-	Stack stack = stack_new(1024);
+	 Arena arena = arena_new(1024);
 	
-	Point* x = (Point*)stack_alloc(stack, sizeof(Point), alignof(Point)).ptr;
+	Point* x = (Point*)arena_alloc(arena, sizeof(Point), alignof(Point)).ptr;
 	x->x = 12;
 	x->y = 25;
 
 
-	int* xx = (int*)stack_alloc(stack, sizeof(int), alignof(int)).ptr;
+	int* xx = (int*)arena_alloc(arena, sizeof(int), alignof(int)).ptr;
 	*xx = 1256;
 
-	float* y = (float*)stack_alloc(stack, sizeof(float), alignof(float)).ptr;
+	float* y = (float*)arena_alloc(arena, sizeof(float), alignof(float)).ptr;
 	*y = 12.5;
 
-
-	stack_free_all(stack);
-
-	Point* k = (Point*)stack_alloc(stack, sizeof(Point), alignof(Point)).ptr;
+	Point* k = (Point*)arena_alloc(arena, sizeof(Point), alignof(Point)).ptr;
 	k->x = 656;
 	k->y = 6332;
 
-	stack_free(stack);
+	arena_free(arena);
 
 	return 0;
 }
