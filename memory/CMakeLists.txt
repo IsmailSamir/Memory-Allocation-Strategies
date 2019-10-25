@@ -4,11 +4,13 @@ cmake_minimum_required(VERSION 3.9)
 set(HEADER_FILES
 	include/memory/Arena.h
 	include/memory/block.h
+	include/memory/Stack.h
 )
 
 # list the source files
 set(SOURCE_FILES
 	src/memory/Arena.cpp
+	src/memory/Stack.cpp
 )
 
 
