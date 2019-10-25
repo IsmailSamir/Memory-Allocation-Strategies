@@ -6,7 +6,7 @@
 #include <string.h>
 #include <assert.h>
 
-namespace msa
+namespace mas
 {
 	struct IPool
 	{

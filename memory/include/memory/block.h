@@ -4,7 +4,7 @@
 
 #include <stdint.h>
 
-namespace msa
+namespace mas
 {
 	struct Block
 	{

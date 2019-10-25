@@ -4,7 +4,7 @@
 
 #include <vld.h>
 
-using namespace msa;
+using namespace mas;
 
 int
 main(int argc, char** argv)

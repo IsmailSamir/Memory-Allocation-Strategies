@@ -9,7 +9,7 @@
 #define DEFAULT_ALIGNMENT (2*sizeof(void*))
 #endif
 
-namespace msa
+namespace mas
 {
 	typedef struct IArena* Arena;
 
