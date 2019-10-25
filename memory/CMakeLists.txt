@@ -5,12 +5,14 @@ set(HEADER_FILES
 	include/memory/Arena.h
 	include/memory/block.h
 	include/memory/Stack.h
+	include/memory/Pool.h
 )
 
 # list the source files
 set(SOURCE_FILES
 	src/memory/Arena.cpp
 	src/memory/Stack.cpp
+	src/memory/Pool.cpp
 )
 
 
